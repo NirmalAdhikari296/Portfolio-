@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mandira Dhup</title>
+<style>
+    /* General Styles */
+    body {
+        margin: 0;
+        font-family: Kantipur, sans-serif;
+        line-height: 1.7;
+        background-color: bisque;
+        color: navy;
+    }
+    a {
+        text-decoration: none;
+        color: rgb(255, 209, 27);
+        font-weight: bolder;
+        transition: color 0.5s;
+        text-shadow: 1px 1px 2px black;
+    }
+    a:hover {
+        color: #c20000;
+        text-shadow: 2px 2px 4px black;
+    }
+
+    /* Navigation */
+    nav {
+        background-color: #8b089c;
+        color: rgb(207, 0, 0);
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        flex-wrap: wrap;
+    }
+    nav h2 {
+        margin: 0;
+        font-size: 24px;
+        text-shadow: 2px 2px 4px black;
+    }
+    nav div a {
+        margin: 5px 10px;
+        font-size: 18px;
+        text-shadow: 1px 1px 2px black;
+    }
+
+    /* Hero Section */
+    .hero {
+        background: url(https://nepalemarket.com/cdn/shop/products/dhoop-1.jpg?v=1629864431) no-repeat center center;
+        background-size: cover;
+        text-align: center;
+        padding: 80px 20px;
+        min-height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #c20000;
+        text-shadow: 2px 2px 4px black;
+    }
+    .hero h1 {
+        font-size: 36px;
+        margin: 0 0 10px;
+    }
+    .hero p {
+        font-size: 18px;
+        margin: 0;
+        color: rgb(255, 60, 239);
+        text-shadow: 1px 1px 2px black;
+    }
+
+    /* Sections */
+    section {
+        max-width: 1200px;
+        margin: auto;
+        padding: 40px 20px;
+    }
+
+    .service, .contact, .about {
+        text-align: center;
+    }
+    .service h2, .contact h2, .about h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #c20000;
+        text-shadow: 2px 2px 4px black;
+    }
+
+    /* Service Items */
+    .service-list {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .service-items {
+        background-color: #ffffff;
+        border: 2px solid #c20000;
+        border-radius: 10px;
+        padding: 20px;
+        flex: 1 1 250px;
+        max-width: 300px;
+        box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+    .service-items h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #c20000;
+        text-shadow: 1px 1px 2px black;
+    }
+    .service-items p {
+        font-size: 16px;
+        margin: 5px 0;
+        color: navy;
+    }
+
+    /* About Section */
+    .about {
+        background-color: #f4f4f4;
+        border: #c20000 2px solid;
+        box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        margin: 20px 0;
+        padding: 50px 20px;
+    }
+    .about h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    .about p {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    /* Contact Section */
+    .contact {
+        box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+        margin: 20px 0;
+        border-radius: 20px;
+        border: #c20000 2px solid;
+        background-color: #f4f4f4;
+    }
+    .contact p {
+        font-size: 16px;
+        margin: 10px 0;
+        color: navy;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #00ffd5;
+        color: rgb(207, 0, 0);
+        text-align: center;
+        padding: 15px 20px;
+        text-shadow: 1px 1px 2px black;
+    }
+    footer p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    /* Responsive Styles */
+    @media(max-width: 1024px) {
+        .hero h1 {
+            font-size: 32px;
+        }
+        .hero p {
+            font-size: 16px;
+        }
+    }
+
+    @media(max-width: 768px){
+        nav {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        nav div {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .hero {
+            min-height: 200px;
+            background-position: top center;
+            padding: 60px 20px;
+        }
+        .hero h1 {
+            font-size: 28px;
+        }
+        .hero p {
+            font-size: 16px;
+        }
+        .service h2, .contact h2, .about h2 {
+            font-size: 24px;
+        }
+        .service-items {
+            max-width: 45%;
+            flex: 1 1 45%;
+        }
+    }
+
+    @media(max-width: 480px){
+        nav h2 {
+            font-size: 20px;
+        }
+        nav div a {
+            margin: 5px 8px;
+            font-size: 16px;
+        }
+        .hero {
+            padding: 50px 10px;
+        }
+        .hero h1 {
+            font-size: 24px;
+        }
+        .hero p {
+            font-size: 14px;
+        }
+        .service h2, .contact h2, .about h2 {
+            font-size: 20px;
+        }
+        .service-items {
+            width: 100%;
+            max-width: 100%;
+        }
+        .service-items h3 {
+            font-size: 18px;
+        }
+        .service-items p, .contact p, .about p {
+            font-size: 14px;
+        }
+    }
+</style>
+</head>
+<body>
+<nav>
+    <h2>Mandira धूप</h2>
+    <div>
+        <a href="#मुख्य वस्तु">मुख्य वस्तु</a>
+        <a href="#हाम्रो सेवा">हाम्रो सेवा</a>
+        <a href="#हाम्रो बारेमा">हाम्रो बारेमा</a>
+        <a href="#सम्पर्क गर्नुहोस्">सम्पर्क गर्नुहोस्</a>
+    </div>
+</nav>
+
+<section class="hero" id="मुख्य वस्तु">
+    <h1>Mandira धूप</h1>
+    <p>शान्ति र सकारात्मक ऊर्जा ल्याउनको लागि हाम्रो धूपहरू अन्वेषण गर्नुहोस्।</p>
+</section>
+
+<section class="service" id="हाम्रो सेवा">
+    <h2>हाम्रो सेवा</h2>
+    <div class="service-list">
+        <div class="service-items">
+            <h3>धूप उत्पादन</h3>
+            <p>हामी प्राकृतिक स्रोतहरूको प्रयोग गरेर धूप बनाउँछौं।</p>
+            <p>यसले घर, कार्यालय वा अन्य कुनै ठाउँमा सकारात्मक ऊर्जा र राम्रो माहोल ल्याउँछ।</p>
+        </div>
+        <div class="service-items">
+            <h3>🏠 घरमै डेलिभरी</h3>
+            <p>हामी तपाईंको घर वा कार्यालयमा धूपहरू डेलिभर गर्छौं।</p>
+            <p>सुविधा र सहजताको लागि, तपाईंले अनलाइन अर्डर गर्न सक्नुहुन्छ।</p>
+        </div>
+        <div class="service-items">
+            <h3>💻 अनलाइन अर्डर</h3>
+            <p>तपाईंले हाम्रो 📞 फोन वा ✉️ इमेल मार्फत अनलाइन अर्डर गर्न सक्नुहुन्छ।</p>
+            <p>हामी तपाईंको ढोकामा धूपहरू ल्याउनेछौं।</p>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="हाम्रो बारेमा">
+    <h2>हाम्रो बारेमा</h2>
+    <p>Mandira धूप प्राकृतिक र शान्तिदायक धूप उत्पादनमा समर्पित छ। हाम्रो धूपहरूले तपाईंको जीवनमा शान्ति, सकारात्मक ऊर्जा, र आध्यात्मिकता ल्याउँछ। हामी गुणस्तर र ग्राहक सन्तुष्टिमा विश्वास गर्छौं।</p>
+    <p>मालिक: _Mandira Baral_</p>
+</section>
+
+<section class="contact" id="सम्पर्क गर्नुहोस्">
+    <h2>सम्पर्क गर्नुहोस्</h2>
+    <p>हामीलाई सम्पर्क गर्नको लागि तलका विकल्पहरू प्रयोग गर्नुहोस्:</p>
+    <p><a href="mailto:mandirabaral12345@gmail.com">📧 Email</a> | <a href="tel:9819094472">📱 Phone</a></p>
+</section>
+
+<footer>
+    <p>&copy; Mandira धूप. सबै अधिकार सुरक्षित।</p>
+</footer>
+</body>
+</html>

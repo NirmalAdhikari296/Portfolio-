@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Webpage</title>
+<style>
+  /* General */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #fff8f0;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: yellow;
+  }
+
+  /* Navbar */
+  nav {
+    background: darkred;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav h2 {
+    margin: 0;
+  }
+
+  nav div a {
+    margin: 0 15px;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') no-repeat center center/cover;
+    color: navy;
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  /* Menu Section */
+  .menu {
+    padding: 40px 20px;
+    background: #f4f4f4;
+  }
+
+  .menu h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: darkred;
+  }
+
+  .menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
+
+  .menu-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+  .menu-item h3 {
+    margin-bottom: 10px;
+    color: darkred;
+  }
+
+  .menu-item p {
+    margin: 5px 0;
+  }
+
+  /* Menu Table */
+  .menu-table {
+    overflow-x: auto;
+    margin-top: 30px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table, th, td {
+    border: 2px solid darkred;
+  }
+
+  th {
+    background: darkred;
+    color: white;
+    padding: 10px;
+  }
+
+  td {
+    padding: 10px;
+    text-align: center;
+  }
+
+  tr:nth-child(even) {
+    background: #ffe5e5;
+  }
+
+  tr:hover {
+    background: #ffcccc;
+  }
+
+  /* About Section */
+  .about {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    background: darkred;
+    color: white;
+  }
+.contact a {
+    color: darkred;
+    font-weight: normal;
+  }
+
+.contact a:hover {
+    color: rgb(129, 129, 228);
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <h2>My Restaurant</h2>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <h1>Welcome to My Restaurant</h1>
+  <p>Our Best Dish: Mutton Gravy</p>
+</section>
+
+<!-- Menu -->
+<section class="menu" id="menu">
+  <h2>Our Menu</h2>
+  <div class="menu-items">
+    <div class="menu-item">
+      <h3>Starter</h3>
+      <p>Momo</p>
+      <p>Chowmein</p>
+    </div>
+    <div class="menu-item">
+      <h3>Main Course</h3>
+      <p>Thakali Rice</p>
+      <p>Chicken Set</p>
+      <p>Veg Set</p>
+      <p>Mutton Set</p>
+    </div>
+    <div class="menu-item">
+      <h3>Dessert</h3>
+      <p>Ice Cream</p>
+      <p>Cake</p>
+      <p>Pastry</p>
+      <p>Fruit Salad</p>
+    </div>
+    <div class="menu-item">
+      <h3>Drinks</h3>
+      <p>Coca Cola</p>
+      <p>Fanta</p>
+      <p>Sprite</p>
+      <p>Lassi</p>
+      <p>Milkshake</p>
+    </div>
+  </div>
+
+  <!-- Table -->
+  <div class="menu-table">
+    <table>
+      <caption>Menu Prices</caption>
+      <tr>
+        <th>Item</th>
+        <th>Price</th>
+      </tr>
+      <tr><td>Momo</td><td>RS 120</td></tr>
+      <tr><td>Chowmein</td><td>RS 80</td></tr>
+      <tr><td>Thakali Rice</td><td>RS 300</td></tr>
+      <tr><td>Chicken Set</td><td>RS 250</td></tr>
+      <tr><td>Mutton Set</td><td>RS 300</td></tr>
+      <tr><td>Ice Cream</td><td>RS 50</td></tr>
+      <tr><td>Cake</td><td>RS 100</td></tr>
+      <tr><td>Pastry</td><td>RS 250</td></tr>
+      <tr><td>Fruit Salad</td><td>RS 80</td></tr>
+      <tr><td>Coca Cola</td><td>RS 30</td></tr>
+      <tr><td>Fanta</td><td>RS 30</td></tr>
+      <tr><td>Sprite</td><td>RS 30</td></tr>
+      <tr><td>Lassi</td><td>RS 50</td></tr>
+      <tr><td>Milkshake</td><td>RS 80</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <h2>About Us</h2>
+  <p>We are a family-run restaurant with over 25 years of tradition, serving delicious dishes made with love.</p>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <p><a href="mailto:nirmaladhikari296@gmail.com">📧 Email</a> | <a href="tel:9800000000">📱 Phone</a></p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Nirmal Adhikari. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Designed Signup Form</title>
+  <style>
+    body {
+      background-color: aquamarine;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: oblique;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+      margin: 0;
+    }
+
+    marquee {
+      padding: 15px;
+      width: 100%;
+      background-color: blueviolet;
+      color: rgb(136, 255, 0);
+      text-align: center;
+      text-decoration: underline wavy yellowgreen;
+      text-shadow: 1px 2px 4px whitesmoke;
+      font-weight: bolder;
+    }
+
+    .form-container {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    h3 {
+      color: brown;
+      margin-bottom: 15px;
+      font-size: 25px;
+      background-color: blanchedalmond;
+      border-radius: 5px;
+      padding: 5px;
+    }
+
+    p {
+      background-color: aliceblue;
+      color: chocolate;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: large;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    input[type="text"], input[type="email"], input[type="date"], input[type="password"] {
+      background-color: black;
+      color: forestgreen;
+      margin: 8px 0;
+      padding: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      border: 1px solid gray;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    input[type="text"]:focus, input[type="email"]:focus, 
+    input[type="date"]:focus, input[type="password"]:focus {
+      color: khaki;
+      background-color: darkslategray;
+      box-shadow: 0 0 6px lime;
+      outline: none;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    /* Inline labels for radio/checkbox */
+    .inline-label {
+      font-weight: normal;
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    /* Style for checkbox & radio */
+    input[type="checkbox"], input[type="radio"] {
+      accent-color: crimson; /* modern browsers */
+      transform: scale(1.2);
+      margin-right: 6px;
+    }
+
+    /* Special style for the submit button */
+    #done {
+      background-color: crimson;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      width: auto;
+      margin-top: 15px;
+    }
+
+    #done:hover {
+      background-color: darkred;
+      transform: scale(1.05);
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 480px) {
+      .form-container {
+        padding: 15px;
+      }
+      h3 {
+        font-size: 20px;
+      }
+      input[type="text"], input[type="email"], 
+      input[type="date"], input[type="password"] {
+        font-size: 14px;
+      }
+      #done {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <marquee behavior="scroll" direction="right">Please Fill this form to proceed</marquee>
+
+  <div class="form-container">
+    <h3>Signup Form</h3>
+    <p>Fill this Form:</p>
+
+    <form>
+      <label for="fullname">Full name:</label>
+      <input type="text" id="fullname" name="fullname">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="dob">Date Of Birth:</label>
+      <input type="date" id="dob" name="dob">
+
+      <label for="pass">Password:</label>
+      <input type="password" id="pass" name="password">
+
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male" class="inline-label">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female" class="inline-label">Female</label>
+
+      <br><br>
+      <input type="checkbox" id="agreement" name="agreement">
+      <label for="agreement" class="inline-label">I accept all terms and conditions</label>
+
+      <br>
+      <input type="submit" id="done" name="ok" value="Submit">
+    </form>
+  </div>
+</body>
+</html>
